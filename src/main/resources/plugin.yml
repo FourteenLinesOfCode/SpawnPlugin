@@ -2,19 +2,20 @@ name: SpawnPlugin
 version: '1.0-SNAPSHOT'
 main: leonlpb.me.spawnPlugin.SpawnPlugin
 api-version: '1.21'
+
 commands:
   spawn:
     description: Teleports the player to spawn
     usage: "/spawn"
 
   setspawn:
-    description: Set where the spawn is, automatically uses ur spot(can be changed by adding the values manually)
-    usage: "/setspawn (only needed in console) x y z yaw pitch"
+    description: Set where the spawn is
+    usage: "/setspawn [x y z yaw pitch world]"
     permission: SpawnPlugin.setspawn
     permission-message: "You do not have permission to use this command"
 
   settingsspawn:
-    description: reload the plugin or change the settings
-    usage: "/settingsspawn yml-key value"
-    permission: Spawnplugin.settingsspawn
+    description: Change plugin settings
+    usage: "/settingsspawn <option>"
+    permission: SpawnPlugin.settingsspawn
     permission-message: "You do not have permission to use this command"

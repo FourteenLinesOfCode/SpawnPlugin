@@ -18,6 +18,8 @@ public class SetSpawnCommand implements CommandExecutor, TabExecutor {
     float yaw;
     float pitch;
 
+    String world;
+
     JavaPlugin plugin;
 
     public SetSpawnCommand(JavaPlugin plugin){
@@ -37,12 +39,14 @@ public class SetSpawnCommand implements CommandExecutor, TabExecutor {
 
              yaw = Float.parseFloat(strings[3]);
              pitch = Float.parseFloat(strings[4]);
+             world = strings[5];
 
             plugin.getConfig().set("settings.x", x);
             plugin.getConfig().set("settings.y", y);
             plugin.getConfig().set("settings.z", z);
             plugin.getConfig().set("settings.yaw", yaw);
             plugin.getConfig().set("settings.pitch", pitch);
+            plugin.getConfig().set("settings.world", world);
 
             plugin.saveConfig();
         }
@@ -57,11 +61,14 @@ public class SetSpawnCommand implements CommandExecutor, TabExecutor {
              yaw = loc.getYaw();
              pitch = loc.getPitch();
 
+             world = loc.getWorld().getName();
+
              plugin.getConfig().set("settings.x", x);
              plugin.getConfig().set("settings.y", y);
              plugin.getConfig().set("settings.z", z);
              plugin.getConfig().set("settings.yaw", yaw);
              plugin.getConfig().set("settings.pitch", pitch);
+             plugin.getConfig().set("settings.world", world);
 
              plugin.saveConfig();
 

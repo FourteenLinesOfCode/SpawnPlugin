@@ -53,7 +53,7 @@ public class SpawnCommand implements CommandExecutor, TabExecutor {
         float yaw = (float) plugin.getConfig().getDouble("settings.yaw");
         float pitch = (float) plugin.getConfig().getDouble("settings.pitch");
 
-        World world = Bukkit.getWorlds().getFirst(); // fixed
+        World world = Bukkit.getWorlds().getFirst();
         Location location = new Location(world, x, y, z, yaw, pitch);
         player.teleport(location);
     }
