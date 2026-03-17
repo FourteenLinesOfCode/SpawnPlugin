@@ -1,0 +1,11 @@
+settings:
+  tp_command_enabled: false
+  tp_on_join: true
+  first_join_only: false
+  x: 0.0
+  y: 64.0
+  z: 0.0
+  yaw: 0.0
+  pitch: 0.0
+  message: "Welcome to the server"
+  world: "world"
